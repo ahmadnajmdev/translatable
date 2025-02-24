@@ -129,7 +129,6 @@ class SpatieLaravelTranslatableContentDriver implements TranslatableContentDrive
         return $query->{$whereClause}(
             generate_search_column_expression($column, $isCaseInsensitivityForced, $databaseConnection),
             'like',
-            (string) str($search)->wrap('%'),
             str($search)->wrap('%')->toString(),
         );
     }
