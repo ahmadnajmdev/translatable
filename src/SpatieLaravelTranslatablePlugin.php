@@ -9,6 +9,8 @@ class SpatieLaravelTranslatablePlugin implements Plugin
 {
     protected ?array $defaultLocales = [];
 
+    protected bool $useFallbackLocale = false;
+
     protected ?Closure $getLocaleLabelUsing = null;
 
     final public function __construct()
@@ -44,6 +46,18 @@ class SpatieLaravelTranslatablePlugin implements Plugin
     public function defaultLocales(?array $defaultLocales = null): static
     {
         $this->defaultLocales = $defaultLocales;
+
+        return $this;
+    }
+
+    public function getUseFallbackLocale(): bool
+    {
+        return $this->useFallbackLocale;
+    }
+
+    public function useFallbackLocale(bool $useFallbackLocale = false): static
+    {
+        $this->useFallbackLocale = $useFallbackLocale;
 
         return $this;
     }

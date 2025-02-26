@@ -108,7 +108,11 @@ class SpatieLaravelTranslatableContentDriver implements TranslatableContentDrive
         }
 
         foreach ($record->getTranslatableAttributes() as $attribute) {
-            $attributes[$attribute] = $record->getTranslation($attribute, $this->activeLocale, useFallbackLocale: false);
+            $attributes[$attribute] = $record->getTranslation(
+                $attribute,
+                $this->activeLocale,
+                useFallbackLocale: filament('spatie-laravel-translatable')->getUseFallbackLocale()
+            );
         }
 
         return $attributes;

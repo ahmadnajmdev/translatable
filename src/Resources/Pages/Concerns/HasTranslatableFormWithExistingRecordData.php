@@ -20,7 +20,11 @@ trait HasTranslatableFormWithExistingRecordData
             $translatedData = [];
 
             foreach ($translatableAttributes as $attribute) {
-                $translatedData[$attribute] = $record->getTranslation($attribute, $locale, useFallbackLocale: false);
+                $translatedData[$attribute] = $record->getTranslation(
+                    $attribute,
+                    $locale,
+                    useFallbackLocale: filament('spatie-laravel-translatable')->getUseFallbackLocale()
+                );
             }
 
             if ($locale !== $this->activeLocale) {
