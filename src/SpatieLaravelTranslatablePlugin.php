@@ -55,7 +55,7 @@ class SpatieLaravelTranslatablePlugin implements Plugin
         return $this->useFallbackLocale;
     }
 
-    public function useFallbackLocale(bool $useFallbackLocale = false): static
+    public function useFallbackLocale(bool $useFallbackLocale = true): static
     {
         $this->useFallbackLocale = $useFallbackLocale;
 
