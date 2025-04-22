@@ -39,6 +39,7 @@ To avoid potential issues, we recommend disabling the local switcher and using t
 
 #### Available Components for Translatable Fields:
 
+* https://filamentphp.com/plugins/abdulmajeed-jamaan-translatable-tabs
 * https://filamentphp.com/plugins/solution-forest-translate-field
 * https://filamentphp.com/plugins/mvenghaus-translatable-inline
 * https://filamentphp.com/plugins/outerweb-translatable-fields
